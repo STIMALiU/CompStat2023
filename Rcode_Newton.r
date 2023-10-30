@@ -40,7 +40,9 @@ xmax <- newton(xs)
 
 # graphical output
 xv   <- seq(-4, 4, by=0.01)
-plot(xv, g(xv), type="l", xlab="x", ylab="y")
+plot(xv, g(xv), type="l", xlab="x", ylab="g(x)")
 points(xs, g(xs), col=2, pch=4, lwd=3)      # starting value in plot
 points(xmax, g(xmax), col=4, pch=4, lwd=3)  # result in plot
- 
+
+plot(xv, dg(xv), type="l", xlab="x", ylab="g'(x)")
+abline(h=0)
